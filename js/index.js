@@ -58,6 +58,10 @@ navBar[3].textContent = siteContent["nav"]["nav-item-4"]
 navBar[4].textContent = siteContent["nav"]["nav-item-5"]
 navBar[5].textContent = siteContent["nav"]["nav-item-6"]
 
-//header text
-const domAws = document.getElementsByTagName('h1');
-domAws.textContent = ["cta"]["h1"]
+//cta
+let h1 = document.querySelector("h1");
+h1.textContent = siteContent["cta"]["h1"];
+
+let button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
