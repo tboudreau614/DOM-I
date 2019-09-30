@@ -50,13 +50,27 @@ let codeBan = document.getElementById("middle-img");
 codeBan.setAttribute('src', siteContent ["main-content"]["middle-img-src"])
 
 //nav
-const navBar = document.getElementsByTagName('a');
-navBar[0].textContent = siteContent["nav"]["nav-item-1"]
-navBar[1].textContent = siteContent["nav"]["nav-item-2"]
-navBar[2].textContent = siteContent["nav"]["nav-item-3"]
-navBar[3].textContent = siteContent["nav"]["nav-item-4"]
-navBar[4].textContent = siteContent["nav"]["nav-item-5"]
-navBar[5].textContent = siteContent["nav"]["nav-item-6"]
+let anchors = document.querySelectorAll("a");
+for(let i = 0; i < anchors.length; i++){	
+  anchors[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+  anchors[i].style.color = "green";
+}	
+
+//task 3 add content
+const addElem = document.createElement("a");
+addElem.href = "#";
+addElem.textContent = "Why Us?";
+addElem.style.color = "green";
+
+const nav = document.querySelector("nav"); 
+nav.appendChild(addElem);
+
+const addElem2 = document.createElement("a");
+addElem2.href = "#";
+addElem2.textContent = "Testimonials";
+addElem2.style.color = "green";
+
+nav.prepend(addElem2);
 
 //cta
 let h1 = document.querySelector("h1");
@@ -88,3 +102,4 @@ p[7].textContent = siteContent["contact"]["email"]
 
 //copyright
 p[8].textContent = siteContent["footer"]["copyright"]
+
