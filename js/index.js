@@ -65,3 +65,17 @@ h1.textContent = siteContent["cta"]["h1"];
 let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
+//main content
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"]
+h4[1].textContent = siteContent["main-content"]["about-h4"]
+h4[2].textContent = siteContent["main-content"]["services-h4"]
+h4[3].textContent = siteContent["main-content"]["product-h4"]
+h4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+let p = document.querySelectorAll("p");
+p[0].textContent = siteContent["main-content"]["features-content"]
+p[1].textContent = siteContent["main-content"]["about-content"]
+p[2].textContent = siteContent["main-content"]["services-content"]
+p[3].textContent = siteContent["main-content"]["product-content"]
+p[4].textContent = siteContent["main-content"]["vision-content"]
